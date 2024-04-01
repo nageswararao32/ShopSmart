@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../Styles/MobStyles.css';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import Img from '../Images/Img.jpg';
 import '../Styles/FooterStyles.css';
 import ames from '../Images/ames.png';
@@ -118,19 +118,20 @@ function MobileView() {
                     </div>
                 </div>
             </div>
+
             <div>
                 <h2><span style={{ color: "gray" }}>HOME</span> <span color='white'> | </span><span color='black'>SHOP</span></h2>
             </div>
             <div>
                 <div class="dk">
-                    <h2 className='hk'>DISCOVER OUR PRODUCTS</h2>
+                    <h2 className='hk' style={{color:"black",fontFamily:"sans-serif",fontSize:"20px",fontWeight:"bold"}}>DISCOVER OUR PRODUCTS</h2>
                     <p className='desck'>Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus scelerisque. Dolor integer scelerisque nibh amet mi ut elementum dolor.</p>
                 </div>
             </div>
             <hr style={{ margin: "10px" }} />
             <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center" }}>
-                <h2 style={{ fontFamily: "sans-serif", color: "black", fontWeight: "bold", fontSize: "20px", textAlign: "center", cursor: "pointer" }}>FILTER</h2>
-                <span style={{ border: "2px solid black", margin: "10px", height: "50px" }}></span>
+                <Link style={{ fontFamily: "sans-serif", color: "black", fontWeight: "bold", fontSize: "20px", textAlign: "center", cursor: "pointer",textDecoration:"none"}} to={'/mvf'}>FILTER</Link>
+                <span style={{ border: "1px solid black", margin: "10px", height: "50px" }}></span>
                 <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
                     <div
                         style={{
@@ -144,14 +145,14 @@ function MobileView() {
                         <h3 style={{ fontWeight: "bold", fontFamily: "sans-serif", display: "inline-block" }}>{selectedOption}<svg style={{ width: "20px", height: "20px", margin: "0px 10px 0px 10px" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" /></svg></h3>
                     </div>
                     {isOpen && (
-                        <div style={{ backgroundColor: '#f9f9f9f9', position: 'absolute', width: '58%' }}>
+                        <div style={{ backgroundColor: '#f9f9f9f9', position: 'absolute', width:"max-content",margin:"60px"}}>
                             {options.map((op) => (
                                 <div
                                     key={op.code}
                                     onClick={() => handleOptionChange({ target: { value: op.code } })}
                                     style={{
-                                        padding: "15px",
-                                        margin: "20px",
+                                        padding:"10px",
+                                        margin: "10px",
                                         textAlign: "right",
                                         cursor: "pointer",
                                         color: op.code === selectedOption ? "black" : "",
@@ -179,7 +180,7 @@ function MobileView() {
                                 </div>
                                 <div className='name1'>
                                     <h3 key={product.id} className='productName1'>{product.title}</h3>
-                                    <span style={{ color: "grey", fontFamily: "sans-serif", fontSize: "12px", margin: "0px 10px 0px 10px" }}><Link style={{ color: "grey", fontFamily: "sans-serif" }}>Sign in</Link> or <Link style={{ color: "grey", fontFamily: "sans-serif", textDecoration: "none" }}>Create an account</Link> to see pricing<Link style={{ margin: "0px 5px 0px 5px" }}></Link></span><span><Link>{index === 2 ? <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="red" style={{ fontSize: "10px" }}><path d="M12 21.35l-1.45-1.32C5.4 16.11 2 13.36 2 9.5 2 7.02 3.78 5 6.01 5c1.34 0 2.63.99 3.99 2.01C10.37 5.99 11.66 5 13 5c2.23 0 4.01 2.02 4.01 4.5 0 3.86-3.4 6.61-8.55 10.54L12 21.35z" /></svg> : <i className="far fa-heart" style={{ fontSize: "20px" }}></i>}</Link></span>
+                                    <span style={{ color: "grey", fontFamily: "sans-serif", fontSize: "10px", margin: "0px 10px 0px 10px" }}><Link style={{ color: "grey", fontFamily: "sans-serif" }}>Sign in</Link> or <Link style={{ color: "grey", fontFamily: "sans-serif", textDecoration: "none" }}>Create an account</Link> to see pricing<Link style={{ margin: "0px 5px 0px 5px" }}></Link></span><span><Link>{index === 2 ? <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="red" style={{ fontSize: "10px" }}><path d="M12 21.35l-1.45-1.32C5.4 16.11 2 13.36 2 9.5 2 7.02 3.78 5 6.01 5c1.34 0 2.63.99 3.99 2.01C10.37 5.99 11.66 5 13 5c2.23 0 4.01 2.02 4.01 4.5 0 3.86-3.4 6.61-8.55 10.54L12 21.35z" /></svg> : <i className="far fa-heart" style={{ fontSize: "20px" }}></i>}</Link></span>
                                 </div>
                             </div>
                         )

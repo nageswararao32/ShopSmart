@@ -58,7 +58,7 @@ function NavBar() {
                 <h1 style={{ textAlign: "center", fontFamily: "sans-serif", marginLeft: "230px" }} className='logo'>LOGO</h1>
                 <div className='mdiv'>
                     <Link className="icon"><i className="fa fa-search"></i></Link>
-                    <Link className="icon"><i className="far fa-heart"></i></Link>
+                    <Link className="icon" to={'/lovedProducts'}><i className="far fa-heart"></i></Link>
                     <Link className="icon"><i className="fa fa-shopping-bag"></i></Link>
                     <Link className="icon" ><i className="far fa-user"></i></Link>
                     <select value={selectedLanguage} onChange={handleLanguageChange} style={{ border: "none", outline: "none", color: "black", cursor: "pointer", fontSize: "16px", fontFamily: "sans-serif" }}>
@@ -112,7 +112,7 @@ function NavBar() {
                             <h3 style={{ fontWeight: "bold", fontFamily: "sans-serif", display: "inline-block" }}>{selectedOption}<svg style={{ width: "20px", height: "20px", margin: "0px 10px 0px 10px" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" /></svg></h3>
                         </div>
                         {isOpen && (
-                            <div style={{ backgroundColor: '#f9f9f9f9', position: 'absolute', top: '75%', left: '60%', width: '28%' }}>
+                            <div style={{ backgroundColor: '#f9f9f9f9', position: 'absolute', width:"max-content" }}>
                                 {options.map((op) => (
                                     <div
                                         key={op.code}

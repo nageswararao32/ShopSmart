@@ -36,14 +36,14 @@
     align-content: center;
 }
 
-.sidebar {
+.sidebar{
     width: 20%;
     height: auto;
     position: absolute;
     text-wrap: wrap;
 }
 
-.productsPage {
+.productsPage{
     height: auto;
     border: 2px solid red;
     margin-left: 22%;
@@ -115,7 +115,7 @@
     cursor: pointer;
     text-align: center;
     margin:7px;
-    width:160px;
+    width:150px;
 }
 
 .productName1 {
@@ -176,3 +176,4 @@
     margin-left: 30px;
     cursor: pointer;
 }
+
